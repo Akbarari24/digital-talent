@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kursus - Digital Talent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        ☰
+      </button>
+      <h1 class="text-xl font-bold text-blue-700">Digital Talent Scholarship</h1>
+    </div>
+    <div class="flex items-center gap-4">
+      <span class="text-gray-600">Halo, Ari 👋</span>
+      <img src="https://i.pravatar.cc/40" class="w-10 h-10 rounded-full border" alt="user">
+    </div>
+  </header>
+
+  <!-- Container -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="bg-blue-700 text-white w-64 min-h-screen p-6 space-y-6 fixed md:relative -left-64 md:left-0 transition-all">
+      <nav class="space-y-4">
+        <a href="dashboard.html" class="block py-2 px-3 rounded-lg hover:bg-blue-600">🏠 Dashboard</a>
+        <a href="kursus.html" class="block py-2 px-3 rounded-lg bg-blue-600">📚 Kursus</a>
+        <a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-600">📊 Progress</a>
+        <a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-600">📝 Sertifikat</a>
+        <a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-600">⚙ Pengaturan</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 md:ml-64">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-6">Daftar Kursus</h2>
+
+      <!-- Search -->
+      <div class="flex items-center justify-between mb-6">
+        <input type="text" placeholder="Cari kursus..." class="w-full md:w-1/3 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <button class="ml-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">+ Tambah Kursus</button>
+      </div>
+
+      <!-- Kursus Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card Kursus -->
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col">
+          <img src="https://source.unsplash.com/400x200/?coding,web" alt="kursus" class="rounded-lg mb-4">
+          <h3 class="text-lg font-bold text-gray-800">Web Development</h3>
+          <p class="text-gray-600 text-sm mb-3">Belajar HTML, CSS, dan JavaScript untuk membuat website interaktif.</p>
+          <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">Durasi: 40 jam</span>
+            <button class="bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 text-sm">Lanjutkan</button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col">
+          <img src="https://source.unsplash.com/400x200/?data,science" alt="kursus" class="rounded-lg mb-4">
+          <h3 class="text-lg font-bold text-gray-800">Data Science</h3>
+          <p class="text-gray-600 text-sm mb-3">Pelajari Python, statistik, dan machine learning untuk analisis data.</p>
+          <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">Durasi: 50 jam</span>
+            <button class="bg-green-600 text-white px-3 py-1 rounded-lg hover:bg-green-700 text-sm">Selesai</button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-5 flex flex-col">
+          <img src="https://source.unsplash.com/400x200/?design,uiux" alt="kursus" class="rounded-lg mb-4">
+          <h3 class="text-lg font-bold text-gray-800">UI/UX Design</h3>
+          <p class="text-gray-600 text-sm mb-3">Dasar desain antarmuka dan pengalaman pengguna yang modern.</p>
+          <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">Durasi: 30 jam</span>
+            <button class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 text-sm">50%</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Script for Sidebar Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-left-64');
+    });
+  </script>
+</body>
+</html>
